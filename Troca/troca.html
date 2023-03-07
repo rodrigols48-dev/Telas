@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/consulta.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid"> <!-- Container -->
+        <h5><span class="badge badge-info badge-pill" style="margin-top: 0.5em;">Troca Geral de Produtos</span></h5>
+        <div class="btn-group" role="group" aria-label="">
+            <button type="button" class="btn btn-secondary btn-dark" data-toggle="modal" data-target="#confirmar">
+                Confirmar
+                <i class="bi bi-circle text-success"></i></button>
+
+            <button type="button" class="btn btn-secondary btn-dark" data-toggle="modal" data-target="#limpar">Limpar
+                <i class="bi bi-trash-fill text-danger"></i></button>
+
+            <button type="button" class="btn btn-secondary btn-dark">Consulta de vendas
+                <i class="bi bi-search text-info"></i></button>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+
+                <div class="form-row box" id="dados0">
+                    <label for="dados0" class="box">Dados Cliente/Vendedor</label>
+                    <div class="col-sm-1" style="margin-top: 8px;">
+                        <label for="tiponumero"></label>
+                        <select class="form-control" name="tiponumero" id="tiponumero">
+                            <option value="">Pedido</option>
+                            <option value="">CFe</option>
+                        </select>
+                    </div>
+
+
+                    <div class="col-sm-3">
+                        <label for="nmrpedido" class="thick">Nº Pedido</label>
+                        <input type="number" name="numeropedido" id="nmrpedido" placeholder="..."
+                            class="col-sm form-control">
+                    </div>
+
+
+                    <div class="form-group col-sm-4">
+                        <label for="Cliente0" class="thick">Localizar cliente</label>
+                        <div class="dropdown bootstrap-select form-control">
+                            <select name="Cliente" id="Cliente0" data-live-search="true"
+                                class="selectpicker form-control"></select>
+                        </div>
+                    </div>
+
+
+                    <div class="col col-sm-4">
+                        <label for="nomepessoa0" class="thick">Nome Pessoa</label>
+                        <input type="text" class="form-control" placeholder="..." name="nomepessoa" id="nomepessoa0">
+                    </div>
+
+
+                    <div class="form-group col-sm-4">
+                        <label for="Vendedor0" class="thick">Localizar vendedor</label>
+                        <div class="dropdown bootstrap-select form-control">
+                            <select name="Vendedor" id="Vendedor0" data-live-search="true"
+                                class="selectpicker form-control"></select>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-4">
+                        <label for="data1" class="thick">Data</label>
+                        <input type="date" class="col-sm form-control" style="margin-left: 0em; margin-bottom: 0.2em;"
+                            id="dataconsulta" name="datapedido" value="" id="data1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+
+
+                <div class="form-row box" id="produto0">
+                    <label for="produto0" class="box">Dados Produto</label>
+                    <div class="col-sm-2">
+                        <label for="tipo0" class="thick">Tipo</label>
+                        <select class=" form-control" name="tipo" id="tipo0">
+                            <option value="">Entrada</option>
+                            <option value="">Saída</option>
+                        </select>
+                    </div>
+
+
+                    <div class="col-sm-3">
+                        <label for="referencia0" class="thick">Referência</label>
+                        <input type="text" placeholder="..." class="form-control" style="margin-bottom: 0.2em;"
+                            name="referencia" id="referencia0">
+                    </div>
+
+
+                    <div class="form-group col-sm-7">
+                        <label for="Descricao0" class="thick">Localizar produto</label>
+                        <div class="dropdown bootstrap-select form-control">
+                            <select name="Descricao" id="Descricao0" data-live-search="true"
+                                class="selectpicker form-control"></select>
+                        </div>
+                    </div>
+
+
+                    <div class="w-100"></div>
+                    <div class="col-sm-2">
+                        <label for="quantidade0" class="thick">QTD</label>
+                        <input type="number" class="form-control" placeholder="..." name="quantidade" id="quantidade0">
+                    </div>
+
+
+                    <div class="col-sm-2">
+                        <label for="valorunitario0" class="thick">Valor unitário</label>
+                        <input type="number" class="form-control" placeholder="R$ 0,00" name="quantidade"
+                            id="valorunitario0">
+                    </div>
+
+
+                    <div class="col-sm-2">
+                        <label for="quantidade0" class="thick">Estoque</label>
+                        <input type="number" class="form-control" placeholder="QTD estoque" name="quantidade"
+                            id="quantidade0">
+                    </div>
+
+
+                    <div class="col-sm-2">
+                        <label for="valorvenda0" class="thick">Valor venda</label>
+                        <select class=" form-control" name="valorvenda" id="valorvenda0">
+                            <option value="">Valor venda 1</option>
+                            <option value="">Valor venda 2</option>
+                            <option value="">Valor venda 3</option>
+                            <option value="">Valor venda 4</option>
+                        </select>
+                    </div>
+
+
+                    <div class="col-sm-2">
+                        <label for="subtotal0" class="thick">Sub total</label>
+                        <input type="number" class="form-control" placeholder="R$ 0,00" name="subtotal" id="subtotal0">
+                    </div>
+
+
+                    <div class="table-responsive" style="margin-top: 0.7em;">
+                        <table class="table table-hover table-bordered">
+                            <thead class="thead-dark">
+                                <tr class="linha">
+                                    <th scope="col">Referência</th>
+                                    <th scope="col">Produto</th>
+                                    <th scope="col">QTD</th>
+                                    <th scope="col">Valor</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="form-group" style="margin-left: 0.4em;">
+                            <button class="btn-sm btn btn-primary" style="margin-bottom: 0.1em;"><i
+                                    class="bi bi-box-arrow-in-down"></i> Confirmar</button>
+                            <button class="btn-sm btn btn-danger" style="margin-bottom: 0.1em;"><i
+                                    class="bi bi-trash"></i>
+                                Excluir
+                                item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-row box" id="observacao1">
+            <label for="observacao1" class="box">Observação</label>
+            <div class="form-group col-sm-12 ">
+                <label for="observacao0" class="thick">Obs.:</label>
+                <textarea name="observacao" id="observacao0" class="form-control" rows="3" maxlenght="100"></textarea>
+            </div>
+        </div>
+
+        <div class="form-row box">
+            <div class="input-group" style="margin-bottom: 0.4em;">
+                <div class="col-sm-2">
+                    <label for="pecasentrada0" class="thick">Qtd peças entrada</label>
+                    <input type="number" name="pecasentrada" class="form-control" id="pecasentrada0">
+                </div>
+                <div class="col-sm-2">
+                    <label for="pecassaida0" class="thick">Qtd peças saída</label>
+                    <input type="number" name="pecasentrada" class="form-control" id="pecassaida0">
+                </div>
+                <div class="col-sm-2">
+                    <label for="valortotal0" class="thick">Valor total</label>
+                    <input type="number" name="pecasentrada" class="form-control" placeholder="R$ 0,00"
+                        id="valortotal0">
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-secondary" style="float: right;">Fechar</button>
+    </div> <!-- Fim Container -->
+
+</body>
+
+
+</html>

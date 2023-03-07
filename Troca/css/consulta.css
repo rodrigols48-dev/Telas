@@ -1,0 +1,67 @@
+.linha {
+    line-height: 16px;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid;
+    border-bottom: 0px solid;
+    /* border-left: 2px solid;
+  border-right: 2px solid;*/
+}
+
+.linha th {
+    white-space: nowrap;
+    width: auto;
+}
+
+p.thick,
+label.thick {
+    font-weight: bold;
+}
+
+p.thicker,
+label.thicker {
+    font-weight: 900;
+}
+
+.linha:hover {
+    background-color: #F0FFFF;
+    color: #000088;
+}
+
+.table_ {
+    width: 100%;
+    border: 0px solid;
+    border-spacing: 0px;
+    padding: 0px;
+    border-collapse: collapse;
+}
+
+.table_ td {
+    width: auto;
+    border: 0px solid;
+    border-spacing: 0px;
+    padding: 0px;
+    border-collapse: collapse;
+}
+
+
+div.box {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 15px 3px 2px 2px;
+    margin-top: 13px;
+    margin-bottom: 8px;
+}
+
+
+
+label.box {
+    margin-left: 12px;
+    margin-top: -28px;
+    position: absolute;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 1px solid transparent;
+    padding: 0px;
+}
